@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <!--昵称  在左上角-->
+    <TextView
+        android:id="@+id/tv_item_nickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="此处放昵称"
+        />
+
+    <!--个性签名 左下角-->
+    <TextView
+        android:id="@+id/tv_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="此处放个性签名"
+        android:layout_alignParentBottom="true"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_item_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="此处放性别"
+        android:layout_alignParentRight="true"
+
+        />
+    <TextView
+        android:id="@+id/tv_item_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="此处放联系方式"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

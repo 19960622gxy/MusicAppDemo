@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+    每一个条目大概是这样的:
+    左边是一个图片，右边有歌曲名，歌曲名下面是歌手
+    -->
+    
+    <TextView
+        android:id="@+id/tv_item_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="24sp"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <!--用一个LinearLayout将歌曲名个歌手放在纵向排列-->
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="歌曲名"
+            android:textSize="24sp"
+            android:maxLines="1"/>
+        <TextView
+            android:id="@+id/tv_item_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="歌手"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

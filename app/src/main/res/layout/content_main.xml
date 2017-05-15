@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.yuer.musicappdemo.activity.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+ <!--这里才是中间内容的地方
+  将ListView写在这里，用来做显示音乐内容的部分
+  再添加一个LinearLayout用做显示播放按钮等等等，如网易云音乐
+ -->
+
+    <ListView
+        android:id="@+id/lvMusicList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </ListView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/ib_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pan"/>
+
+        <!--首先这里面左边包含一个TextView    正在播放的音乐文件的标题-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                     android:id="@+id/tv_title_playing"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="爱呀"
+                     android:maxEms="5"
+                     android:maxLines="1"
+                     android:ellipsize="end"
+                     android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_title_artist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-金玟岐"
+                    android:maxEms="5"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="24sp" />
+             </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_title_nowDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="现在"
+                    android:textSize="18sp"/>
+                 <TextView
+                      android:id="@+id/tv_title_duration"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="/时长"
+                      android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!--用一个textview占位，把按钮挤过右边去-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <!--右边有一些按钮   暂停和下一首-->
+         <ImageButton
+             android:id="@+id/ib_pause"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/play"
+             android:layout_gravity="center" />
+
+        <ImageButton
+            android:id="@+id/ib_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/next"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
